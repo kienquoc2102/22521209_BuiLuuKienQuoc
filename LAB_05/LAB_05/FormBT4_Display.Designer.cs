@@ -60,6 +60,7 @@
             btn_Buy.TabIndex = 5;
             btn_Buy.Text = "Mua vé";
             btn_Buy.UseVisualStyleBackColor = false;
+            btn_Buy.Click += btn_Buy_Click;
             // 
             // label_name
             // 
@@ -93,6 +94,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             Controls.Add(label_link);
             Controls.Add(pictureBox_film);
             Controls.Add(label_name);

@@ -34,6 +34,7 @@
             // 
             // panel_listfilm
             // 
+            panel_listfilm.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel_listfilm.AutoScroll = true;
             panel_listfilm.BorderStyle = BorderStyle.FixedSingle;
             panel_listfilm.Location = new Point(12, 64);

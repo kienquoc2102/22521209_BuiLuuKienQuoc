@@ -22,13 +22,16 @@ namespace LAB_05
         private string url = "https://betacinemas.vn/phim.htm";
         private string filepath = "movies.html";
         private string filepath_json = "movies.json";
-        private WebClient myClient = new WebClient();
 
-        private class Movie
+        //
+        private List<string> CreateSeats(string pre)
         {
-            public string MovieName { get; set; }
-            public string MovieUrl { get; set; }
-            public string MovieImg { get; set; }
+            List<string> list = new List<string>();
+            for(int i = 0; i < 20 ; i++)
+            {
+                list.Add(pre + i.ToString());
+            }
+            return list;
         }
 
         //DownLoad file html
@@ -69,11 +72,32 @@ namespace LAB_05
                     string movieUrl = $"https://betacinemas.vn/{nameTag.GetAttribute("href")}";
                     string movieImg = imgTag.GetAttribute("src");
 
+                    List<List<string>> seat_temp = new List<List<string>>();
+                    seat_temp.Add(CreateSeats("A"));
+                    seat_temp.Add(CreateSeats("B"));
+                    seat_temp.Add(CreateSeats("C"));
+                    seat_temp.Add(CreateSeats("D"));
+                    seat_temp.Add(CreateSeats("E"));
+
+                    List<Room> room_temp = new List<Room>();
+                    for (int i = 0; i < 2; i++)
+                    {
+                        Room room = new Room()
+                        {
+                            name = "C"+i.ToString(),
+                            available_seats = seat_temp,
+                            bought_seats = new List<string>()
+                        };
+                        room_temp.Add(room);
+                    }
+                    
+
                     Movie movie = new Movie()
                     {
                         MovieName = movieName,
                         MovieUrl = movieUrl,
-                        MovieImg = movieImg
+                        MovieImg = movieImg,
+                        Rooms = room_temp
                     };
 
                     list.Add(movie);
@@ -132,6 +156,10 @@ namespace LAB_05
                     //Tạo Panel
                     Panel panel = new Panel();
                     panel.Size = new System.Drawing.Size(658, 164);
+                    panel.Anchor = AnchorStyles.Right;
+                    panel.Anchor = AnchorStyles.Left;
+                    panel.Anchor = AnchorStyles.Top;
+
 
                     //Xác định vị trí mặc định của panel
                     if (panel_listfilm.Controls.Count > 0)

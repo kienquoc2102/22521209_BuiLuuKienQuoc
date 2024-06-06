@@ -18,9 +18,11 @@ namespace LAB_05
             InitializeComponent();
             LoadLabel(name, url);
             LoadImg(img);
-            GetUrl(url);
+            GetInfo(url, img, name);
         }
         private string url_film;
+        private string img_film;
+        private string name_film;
 
         private void LoadLabel(string name, string url)
         {
@@ -50,14 +52,22 @@ namespace LAB_05
             }
         }
 
-        private void GetUrl(string url)
+        private void GetInfo(string url, string img, string name)
         {
             url_film = url;
+            img_film = img;
+            name_film = name;
         }
 
         private void btn_detail_Click(object sender, EventArgs e)
         {
             FormBT4_DetailFilm f = new FormBT4_DetailFilm(url_film);
+            f.Show();
+        }
+
+        private void btn_Buy_Click(object sender, EventArgs e)
+        {
+            FormBT4_Buy f = new FormBT4_Buy(name_film, img_film);
             f.Show();
         }
     }
