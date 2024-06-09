@@ -32,7 +32,6 @@
             btn_OpenFormBT4 = new Button();
             btn_OpenFormBT2 = new Button();
             btn_OpenFormBT5 = new Button();
-            btn_OpenFormBT3 = new Button();
             btn_OpenFormBT6 = new Button();
             SuspendLayout();
             // 
@@ -71,7 +70,7 @@
             btn_OpenFormBT2.Name = "btn_OpenFormBT2";
             btn_OpenFormBT2.Size = new Size(356, 47);
             btn_OpenFormBT2.TabIndex = 2;
-            btn_OpenFormBT2.Text = "Bài 2";
+            btn_OpenFormBT2.Text = "Bài 2 và 3";
             btn_OpenFormBT2.UseVisualStyleBackColor = false;
             btn_OpenFormBT2.Click += btn_OpenFormBT2_Click;
             // 
@@ -88,25 +87,12 @@
             btn_OpenFormBT5.UseVisualStyleBackColor = false;
             btn_OpenFormBT5.Click += btn_OpenFormBT5_Click;
             // 
-            // btn_OpenFormBT3
-            // 
-            btn_OpenFormBT3.BackColor = Color.White;
-            btn_OpenFormBT3.FlatStyle = FlatStyle.Flat;
-            btn_OpenFormBT3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_OpenFormBT3.Location = new Point(12, 141);
-            btn_OpenFormBT3.Name = "btn_OpenFormBT3";
-            btn_OpenFormBT3.Size = new Size(356, 47);
-            btn_OpenFormBT3.TabIndex = 4;
-            btn_OpenFormBT3.Text = "Bài 3";
-            btn_OpenFormBT3.UseVisualStyleBackColor = false;
-            btn_OpenFormBT3.Click += btn_OpenFormBT3_Click;
-            // 
             // btn_OpenFormBT6
             // 
             btn_OpenFormBT6.BackColor = Color.White;
             btn_OpenFormBT6.FlatStyle = FlatStyle.Flat;
             btn_OpenFormBT6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_OpenFormBT6.Location = new Point(394, 141);
+            btn_OpenFormBT6.Location = new Point(207, 138);
             btn_OpenFormBT6.Name = "btn_OpenFormBT6";
             btn_OpenFormBT6.Size = new Size(356, 47);
             btn_OpenFormBT6.TabIndex = 5;
@@ -120,7 +106,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(762, 221);
             Controls.Add(btn_OpenFormBT6);
-            Controls.Add(btn_OpenFormBT3);
             Controls.Add(btn_OpenFormBT5);
             Controls.Add(btn_OpenFormBT2);
             Controls.Add(btn_OpenFormBT4);
@@ -136,7 +121,6 @@
         private Button btn_OpenFormBT4;
         private Button btn_OpenFormBT2;
         private Button btn_OpenFormBT5;
-        private Button btn_OpenFormBT3;
         private Button btn_OpenFormBT6;
     }
 }

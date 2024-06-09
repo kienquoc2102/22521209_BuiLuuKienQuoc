@@ -255,10 +255,10 @@ namespace LAB_05
 
             var client = new SmtpClient();
             client.Connect("smtp.gmail.com", 465, true);
-            client.Authenticate("22521209@gm.uit.edu.vn", "dgrz zvxj jmaq oqbi");
+            client.Authenticate("rapphimdomdom@gmail.com", "osmw jcan gwag wxwc");
 
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("22521209", "22521209@gm.uit.edu.vn"));
+            message.From.Add(new MailboxAddress("rapphimdomdom", "rapphimdomdom@gmail.com"));
             message.To.Add(new MailboxAddress("", $"{email}"));
             message.Subject = subject;
             message.Body = new TextPart("plain")

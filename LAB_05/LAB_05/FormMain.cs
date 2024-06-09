@@ -19,12 +19,7 @@ namespace LAB_05
 
         private void btn_OpenFormBT2_Click(object sender, EventArgs e)
         {
-            OpenForm(new FormBT2());
-        }
-
-        private void btn_OpenFormBT3_Click(object sender, EventArgs e)
-        {
-            OpenForm(new FormBT3());
+            OpenForm(new FormBT2_BT3());
         }
 
         private void btn_OpenFormBT4_Click(object sender, EventArgs e)
